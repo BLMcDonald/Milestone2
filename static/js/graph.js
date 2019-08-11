@@ -9,11 +9,13 @@ function createGraphs(error, cerealData) {
     cerealData.forEach(function(d) {
         d.sugars = parseInt(d.sugars);
         d.calories = parseInt(d.calories);
+        d.rating = parseFloat(d.rating);
     });
     
     show_mfr_selector(ndx);
     show_cereal_calories(ndx);
     show_sugar_calories_plot(ndx);
+    show_calories_rating_plot(ndx);
     
     dc.renderAll();
 }
@@ -69,5 +71,32 @@ function show_sugar_calories_plot(ndx) {
         })
         .dimension(sugarsDim)
         .group(sugarsCaloriesGroup)
-        .margins({top: 10, right: 50, bottom: 75, left: 75});
+        .margins({top: 75, right: 75, bottom: 75, left: 75});
+}
+
+function show_calories_rating_plot(ndx) {
+    var cDim = ndx.dimension(dc.pluck('calories'));
+    var caloriesDim = ndx.dimension(function(d) {
+        return [d.calories, d.rating]
+    });
+    var caloriesRatingGroup = caloriesDim.group();
+    
+    var minCalories = cDim.bottom(1)[0].calories;
+    var maxCalories = cDim.top(1)[0].calories;
+    
+    dc.scatterPlot("#calories-rating-plot")
+        .width(1000)
+        .height(400)
+        .x(d3.scale.linear().domain([minCalories,maxCalories]))
+        .brushOn(false)
+        .symbolSize(8)
+        .clipPadding(10)
+        .xAxisLabel("Calories")
+        .yAxisLabel("Rating")
+        .title(function(d) {
+            return "Rating: " + d.key[1]
+        })
+        .dimension(caloriesDim)
+        .group(caloriesRatingGroup)
+        .margins({top: 75, right: 75, bottom: 75, left: 75});
 }
