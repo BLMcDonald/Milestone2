@@ -1,26 +1,27 @@
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+# Brett McDonald Milestone Project 2
+Interactive Frontend Development Milestone Project
+This is a website that I made that visualizes some data about cereal.
 
+## UX
+My goal was to make the website easy to use and accesable to the user.
 
-Hi there! Welcome to Cloud9 IDE!
+## Technologies
+1. Html
+2. CSS
+3. Javascript
+4. Bootstrap - https://getbootstrap.com/
+5. d3.js - https://d3js.org/
+6. dc.js - https://dc-js.github.io/dc.js/
+7. Crossfilter - https://square.github.io/crossfilter/
 
-To get you started, we included a small hello world application.
+## Features
+Bar chart, scatter plot
 
-1) Open the hello-world.html file
+## Testing
+Everything was tested manually to make sure it functioned correctly
 
-2) Click on the Preview button to open a live preview pane
+## Deployment
+The site is deployed on GitHub Pages. It updates everytime the master branch updates
 
-3) Make some changes to the file, save, watch the preview, and have fun!
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for documentation, or http://support.c9.io for support.
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+## Credits
+The csv file used for data was obtained from https://perso.telecom-paristech.fr/eagan/class/igr204/datasets

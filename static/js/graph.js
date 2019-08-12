@@ -71,7 +71,7 @@ function show_sugar_calories_plot(ndx) {
         })
         .dimension(sugarsDim)
         .group(sugarsCaloriesGroup)
-        .margins({top: 75, right: 75, bottom: 75, left: 75});
+        .margins({top: 20, right: 75, bottom: 75, left: 75});
 }
 
 function show_calories_rating_plot(ndx) {
@@ -98,5 +98,5 @@ function show_calories_rating_plot(ndx) {
         })
         .dimension(caloriesDim)
         .group(caloriesRatingGroup)
-        .margins({top: 75, right: 75, bottom: 75, left: 75});
+        .margins({top: 20, right: 75, bottom: 75, left: 75});
 }
